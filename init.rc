@@ -764,3 +764,14 @@ service logcatd /system/bin/logcat -b all -v threadtime -v usec -v printable -D 
     user logd
     group log
     writepid /dev/cpuset/system-background/tasks
+
+# Start sysinit.sh
+on property:sys.boot_completed=1
+    start sysinit
+    
+service sysinit /sbin/sysinit.sh
+    oneshot
+    class late_start
+    user root
+    group root
+    disabled

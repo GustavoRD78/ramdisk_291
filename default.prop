@@ -1,12 +1,14 @@
 #
 # ADDITIONAL_DEFAULT_PROPERTIES
+# 78KERNEL_Z3 MM - BY GUSTAVO RD78
 #
-persist.sys.usb.config=mtp
+persist.sys.usb.config=mtp,adb
 ro.sys.umsdirtyratio=5
 drm.service.enabled=true
-ro.secure=1
+ro.secure=0
 ro.allow.mock.location=0
-ro.debuggable=0
+ro.debuggable=1
+persist.adb.notify=0
 ro.zygote=zygote32
 dalvik.vm.image-dex2oat-Xms=64m
 dalvik.vm.image-dex2oat-Xmx=64m
