@@ -119,28 +119,6 @@ on post-fs
     exec /system/bin/chargemon
     write /sys/class/power_supply/battery/enable_shutdown_at_low_battery 1
 
-    # mount system/odex.app in user and userdebug
-    wait /system/odex.app.sqsh
-    
-    mount squashfs loop@/system/odex.app.sqsh /system/odex.app ro
-    
-
-    # mount system/odex.priv-app in user and userdebug
-    mount squashfs loop@/system/odex.priv-app.sqsh /system/odex.priv-app ro
-    
-
-    # mount system/odex.framework in user and userdebug
-    mount squashfs loop@/system/odex.framework.sqsh /system/odex.framework ro
-    
-
-    # mount system/etc/customization/applications in user and userdebug
-    mount squashfs loop@/system/etc/customization/orig.applications.sqsh /system/etc/customization/orig.applications ro
-    
-
-    # mount system/etc/product/applications in user and userdebug
-    mount squashfs loop@/system/etc/product/orig.applications.sqsh /system/etc/product/orig.applications ro
-    
-
     # create directory for scd
     mkdir /dev/socket/scd 0755 system system
     mkdir /data/scd 0755 system system
