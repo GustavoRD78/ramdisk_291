@@ -1,6 +1,6 @@
 #
 # ADDITIONAL_DEFAULT_PROPERTIES
-# 78KERNEL_Z3 MM - BY GUSTAVO RD78
+# 78KERNEL_Z3 6.0.1 Marshmallow - BY GUSTAVO RD78
 #
 persist.sys.usb.config=mtp,adb
 ro.sys.umsdirtyratio=5
